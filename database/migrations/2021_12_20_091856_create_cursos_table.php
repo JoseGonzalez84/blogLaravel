@@ -18,6 +18,7 @@ class CreateCursosTable extends Migration
             function (Blueprint $table) {
                 $table->id(); // Id clásico.
                 $table->string('name'); // Varchar 255.
+                $table->string('slug'); // Para crear URLs amigables.
                 $table->text('descripcion'); // Text.
                 $table->text('categoria');
                 $table->timestamps(); // Created at y Updated at.
