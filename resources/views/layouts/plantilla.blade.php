@@ -15,22 +15,9 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Coders free</h1>
-        <nav>
-            <ul>
-                <li><a href="{{route('home')}}" class={{request()->routeIs('home') ? 'active' : ''}}>Inicio</a>
-                    @dump(request()->routeIs('home'))
-                </li>
-                <li><a href="{{route('cursos.index')}}">Cursos</a>
-                    @dump(request()->routeIs('cursos.index'))
-                </li>
-                <li><a href="{{route('nosotros')}}">Nosotros</a>
-                    @dump(request()->routeIs('nosotros'))
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include de una plantilla -->
+    @include('layouts.partials.header')
+
     <h1>@yield('content')</h1>
 </body>
 </html>
